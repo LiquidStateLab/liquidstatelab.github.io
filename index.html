@@ -1,96 +1,92 @@
 <!doctype html>
-<html lang="it">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Green Solvents Lab</title>
-  <meta name="description" content="Type-V DES, wbDES, Ionic Liquids: dal design molecolare alle applicazioni.">
+  <title>Liquid State Lab</title>
+  <meta name="description" content="Type-V DES, wbDES, Ionic Liquids: from molecular design to applications.">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
   <header class="nav">
-    <a href="#home" class="logo">Green Solvents Lab</a>
+    <a href="#home" class="logo">Liquid State Lab</a>
 
     <nav class="nav-links" aria-label="Main">
-      <!-- Dropdown Ricerca (trigger <a> per allineamento perfetto) -->
       <div class="dropdown">
-        <a href="#" class="dropbtn" role="button" aria-haspopup="true" aria-expanded="false" aria-controls="menu-ricerca">
-          <span>Ricerca</span>
+        <a href="#" class="dropbtn" role="button" aria-haspopup="true" aria-expanded="false" aria-controls="menu-research">
+          <span>Research</span>
           <svg class="chev" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           </svg>
         </a>
-        <div id="menu-ricerca" class="dropdown-menu" role="menu">
-          <a role="menuitem" href="ricerca/type-v-des.html">
-            <span class="kicker">Type-V DES</span>
-            <span class="sub">Formulazione razionale e micro-segregazione</span>
+        <div id="menu-research" class="dropdown-menu" role="menu">
+          <a role="menuitem" href="research/type-v-des.html">
+            <span class="kicker">Type‑V DES</span>
+            <span class="sub">Rational formulation & micro‑segregation</span>
           </a>
-          <a role="menuitem" href="ricerca/wbdes.html">
+          <a role="menuitem" href="research/wbdes.html">
             <span class="kicker">wbDES</span>
-            <span class="sub">L’acqua come co-architetto della rete H-bond</span>
+            <span class="sub">Water as a co‑architect of the H‑bond network</span>
           </a>
-          <a role="menuitem" href="ricerca/ionic-liquids.html">
+          <a role="menuitem" href="research/ionic-liquids.html">
             <span class="kicker">Ionic Liquids</span>
-            <span class="sub">Struttura, dielettrico e trasporto</span>
+            <span class="sub">Structure, dielectric, and transport</span>
           </a>
         </div>
       </div>
 
-      <!-- Altri link -->
-      <a href="#pubblicazioni">Pubblicazioni</a>
-      <a href="#notizie">Notizie</a>
-      <a href="#eventi">Eventi</a>
-      <a href="#contatti">Contatti</a>
+      <a href="#publications">Publications</a>
+      <a href="#news">News</a>
+      <a href="#events">Events</a>
+      <a href="#contacts">Contacts</a>
     </nav>
   </header>
 
   <main id="home" class="hero">
-    <h1>Formuliamo solventi intelligenti: <em>DES &amp; Green Chemistry</em></h1>
-    <p>Type-V DES, wbDES, IL. Dalla struttura microscopica alle proprietà e alle applicazioni.</p>
-    <a class="btn" href="#ricerca">Esplora la ricerca</a>
-    <a class="btn ghost" href="#contatti">Contattaci</a>
+    <h1>We design smart solvents: <em>DES &amp; Green Chemistry</em></h1>
+    <p>Type‑V DES, wbDES, Ionic Liquids. From microscopic structure to properties and applications.</p>
+    <a class="btn" href="#research">Explore research</a>
+    <a class="btn ghost" href="#contacts">Contact us</a>
   </main>
 
-  <section id="ricerca"><h2>Linee di ricerca</h2><div id="cards"></div></section>
-  <section id="pubblicazioni"><h2>Pubblicazioni</h2><ul id="pubs"></ul></section>
-  <section id="notizie"><h2>Notizie</h2><div id="news"></div></section>
-  <section id="eventi"><h2>Eventi</h2><div id="events"></div></section>
+  <section id="research"><h2>Research lines</h2><div id="cards"></div></section>
+  <section id="publications"><h2>Publications</h2><ul id="pubs"></ul></section>
+  <section id="news"><h2>News</h2><div id="news-list"></div></section>
+  <section id="events"><h2>Events</h2><div id="events-list"></div></section>
 
-  <section id="contatti">
-    <h2>Contatti</h2>
+  <section id="contacts">
+    <h2>Contacts</h2>
 
-    <!-- Form che apre il client email dell'utente (mailto) -->
     <form id="contact-mini" onsubmit="return composeMailto(event)">
-      <label>Nome
-        <input type="text" name="nome" placeholder="Nome" required>
+      <label>Name
+        <input type="text" name="nome" placeholder="Your name" required>
       </label>
       <label>Email
-        <input type="email" name="reply" placeholder="Email" required>
+        <input type="email" name="reply" placeholder="Your email" required>
       </label>
-      <label>Messaggio
-        <textarea name="msg" placeholder="Messaggio" rows="6" required></textarea>
+      <label>Message
+        <textarea name="msg" placeholder="Your message" rows="6" required></textarea>
       </label>
-      <button type="submit">Invia</button>
-      <p class="note">Questo form apre il tuo client email con una bozza già compilata. Nessun dato viene salvato sul sito.</p>
+      <button type="submit">Send</button>
+      <p class="note">This form opens your mail client with a pre‑filled draft. No data is stored by the site.</p>
     </form>
 
     <div class="card" style="margin-top:12px;">
-      <strong>Email diretta:</strong>
+      <strong>Direct email:</strong>
       <a id="mailto-obf"></a>
       &nbsp;·&nbsp;
-      <a id="gmail-link" target="_blank" rel="noopener">Apri Gmail web</a>
+      <a id="gmail-link" target="_blank" rel="noopener">Open Gmail web</a>
     </div>
   </section>
 
-  <footer>© <span id="y"></span> Green Solvents Lab • Tutti i diritti riservati</footer>
+  <footer>© <span id="y"></span> Liquid State Lab • All rights reserved</footer>
   <script src="assets/main.js"></script>
   <script>
-    /* Configurazione indirizzo per link visibile e Gmail */
     const USER = "alessandro.triolo20081970";
     const DOMAIN = "gmail.com";
     mountObfuscatedEmail("mailto-obf", USER, DOMAIN);
     const gmail = document.getElementById("gmail-link");
-    gmail.href = "https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=" + encodeURIComponent(USER + "@" + DOMAIN) + "&su=" + encodeURIComponent("Contatto dal sito Green Solvents Lab");
+    gmail.href = "https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=" + encodeURIComponent(USER + "@" + DOMAIN) + "&su=" + encodeURIComponent("Message from Liquid State Lab website");
   </script>
 </body>
 </html>

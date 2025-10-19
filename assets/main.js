@@ -1,11 +1,11 @@
-// Aggiorna anno footer
+// Footer year
 document.getElementById("y").textContent = new Date().getFullYear();
 
-// Contenuti demo
+// Demo content
 const cards = [
-  { tag:"wbDES", title:"L’acqua come co-architetto", text:"Modula rete H-bond e solubilità." },
-  { tag:"Type-V DES", title:"Progettazione razionale", text:"Carvacrolo + accettori HB (DMSO, TMU, DMC…)." },
-  { tag:"IL & miscele", title:"Dalla micro-segregazione alle proprietà", text:"Colleghiamo CDF/RDF/S(q) a trasporto." }
+  { tag:"wbDES", title:"Water as co‑architect", text:"Modulates H‑bond network and solubility." },
+  { tag:"Type‑V DES", title:"Rational design", text:"Carvacrol + HB acceptors (DMSO, TMU, DMC…)." },
+  { tag:"IL & mixtures", title:"From micro‑segregation to properties", text:"Linking CDF/RDF/S(q) to transport." }
 ];
 document.getElementById("cards").innerHTML = cards.map(c => `
   <article class="card">
@@ -16,32 +16,32 @@ document.getElementById("cards").innerHTML = cards.map(c => `
 `).join("");
 
 const pubs = [
-  { year:2025, title:"Type-V DES per dissoluzione selettiva di polimeri", venue:"ACS SusChemEng (in prep)", link:"#"},
-  { year:2024, title:"Orientazione S=O e trasporto in DMSO-Carvacrolo", venue:"J. Chem. Phys.", link:"#"},
+  { year:2025, title:"Type‑V DES for selective polymer dissolution", venue:"ACS SusChemEng (in prep)", link:"#"},
+  { year:2024, title:"S=O orientation and transport in DMSO–Carvacrol", venue:"J. Chem. Phys.", link:"#"},
 ];
 document.getElementById("pubs").innerHTML = pubs.map(p => `
   <li class="card"><div>${p.year} • ${p.venue}</div><strong>${p.title}</strong>
   <div><a href="${p.link}">DOI / PDF</a></div></li>
 `).join("");
 
-document.getElementById("news").innerHTML = `
-  <div class="card">2025-09-12 — Best Poster a ILMAT (wbDES).</div>
-  <div class="card">2025-07-01 — Fondi Ateneo per scattering e MD.</div>
+document.getElementById("news-list").innerHTML = `
+  <div class="card">2025‑09‑12 — Best Poster at ILMAT (wbDES).</div>
+  <div class="card">2025‑07‑01 — University funds for scattering & MD.</div>
 `;
 
-document.getElementById("events").innerHTML = `
-  <div class="card"><strong>ILMAT2025 — CNR, Roma</strong><br>2025-09-08 → 2025-09-12</div>
+document.getElementById("events-list").innerHTML = `
+  <div class="card"><strong>ILMAT2025 — CNR, Rome</strong><br>2025‑09‑08 → 2025‑09‑12</div>
 `;
 
-// ---- Mailto helper (compose email from form) ----
+// ---- Mailto helper ----
 const MAIL_TO = "alessandro.triolo20081970@gmail.com";
-const MAIL_SUBJECT = "Contatto dal sito Green Solvents Lab";
+const MAIL_SUBJECT = "Message from Liquid State Lab website";
 
 function composeMailto(e){
   e.preventDefault();
   const f = e.target;
   const body = [
-    "Nome: " + (f.nome?.value || ""),
+    "Name: " + (f.nome?.value || ""),
     "Email: " + (f.reply?.value || ""),
     "",
     (f.msg?.value || "")
@@ -53,7 +53,7 @@ function composeMailto(e){
   return false;
 }
 
-// ---- Email offuscata + Gmail fallback ----
+// ---- Obfuscated email + Gmail fallback ----
 function mountObfuscatedEmail(elId, user, domain){
   const el = document.getElementById(elId);
   if(!el) return;
@@ -62,7 +62,7 @@ function mountObfuscatedEmail(elId, user, domain){
   el.textContent = addr;
 }
 
-// Dropdown Ricerca — toggle elegante e accessibile
+// Dropdown toggle
 (function () {
   const dd = document.querySelector('.dropdown');
   if (!dd) return;

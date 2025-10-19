@@ -93,3 +93,11 @@ function mountObfuscatedEmail(elId, user, domain){
     }
   });
 })();
+// --- Analytics: GoatCounter (privacy-friendly, cookie-free) ---
+(function addGoatCounter(){
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://gc.zgo.at/count.js';
+  s.setAttribute('data-goatcounter', 'https://liquidstatelab.goatcounter.com/count');
+  document.head.appendChild(s);
+})();
